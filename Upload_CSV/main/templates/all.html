@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Platform</th>
+    <th>Year</th>
+    <th>Genre</th>
+    <th>Publisher</th>
+    <th>NA Sales</th>
+    <th>EU Sales</th>
+    <th>JP Sales</th>
+    <th>Other Sales</th>
+    <th>Global Sales</th>
+  </tr>
+  {% for game in games %}
+  <tr>
+    <td>{{ game.name }}</td>
+    <td>{{ game.platform }}</td>
+    <td>{{ game.year }}</td>
+    <td>{{ game.genre }}</td>
+    <td>{{ game.publisher }}</td>
+    <td>{{ game.na_sales }}</td>
+    <td>{{ game.eu_sales }}</td>
+    <td>{{ game.jp_sales }}</td>
+    <td>{{ game.other_sales }}</td>
+    <td>{{ game.global_sales }}</td>
+  </tr>
+  {% endfor %}
+  <p>Загружено строк: {{ games.count }}</p>
+</table>
+</body>
+</html>
